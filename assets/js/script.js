@@ -159,3 +159,28 @@ addEventOnElements(hoveredElements, "mouseout", function () {
     cursors[i].classList.remove("hovered");
   }
 });
+
+'use strict';
+
+// Toggle antara Skills dan Tools
+document.querySelectorAll(".toggle-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove 'active' class from all buttons
+    document.querySelectorAll(".toggle-btn").forEach((b) => b.classList.remove("active"));
+
+    // Add 'active' class to clicked button
+    btn.classList.add("active");
+
+    // Get the type (skills/tools) from the button
+    const type = btn.getAttribute("data-skill");
+
+    // Hide all skill lists
+    document.querySelectorAll(".skills-list").forEach((list) => {
+      list.classList.remove("active");
+    });
+
+    // Show the selected skill list
+    document.querySelector(`.skills-list[data-type="${type}"]`).classList.add("active");
+  });
+});
+

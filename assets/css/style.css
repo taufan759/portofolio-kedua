@@ -818,25 +818,103 @@ body.nav-active { overflow: hidden; }
 
 
 
-
-
 /*-----------------------------------*\
-  #TESTIMONIALS
+ * #SKILLS
 \*-----------------------------------*/
 
-.testi { border-block: 1px solid var(--border-eerie-black); }
-
-.testi-content { padding-inline-start: 15px; }
-
-.testi .section-text {
-  text-indent: -15px;
-  line-height: 1.5;
-  margin-block-end: 20px;
+/* General Section */
+.skills {
+  padding: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: black;
 }
 
-.profile-card .card-banner { display: none; }
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left (1fr), Right (2fr) */
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
 
-.profile-card .card-subtitle { font-size: var(--fontSize-10); }
+/* Left Section */
+.skills-info {
+  padding: 20px;
+}
+
+.skills-info .skills-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  background-color: #555;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-btn.active {
+  background-color: white;
+  color: black;
+}
+
+/* Right Section */
+.skills-content {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Skill Cards */
+.skill-card {
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 1px solid white;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: white;
+  margin: 0;
+}
+
+/* Flexbox untuk Skill List */
+.skills-list {
+  display: none; /* Default tersembunyi */
+  flex-wrap: wrap; /* Membungkus ke baris berikutnya jika penuh */
+  gap: 20px; /* Jarak antar item */
+  justify-content: center; /* Pusatkan item secara horizontal */
+}
+
+.skills-list.active {
+  display: flex; /* Tampilkan aktif */
+}
+
 
 
 
