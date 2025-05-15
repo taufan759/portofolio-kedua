@@ -345,7 +345,20 @@ body.nav-active { overflow: hidden; }
   }
 }
 
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
 
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 
 
@@ -1622,3 +1635,5 @@ textarea.input-field {
   .hero .container { grid-template-columns: 1fr 0.85fr; }
 
 }
+
+
